@@ -7,7 +7,7 @@ Douban(Movie): The original data is downloaded from the following link, cited as
 [original data](https://github.com/DeepGraphLearning/RecommenderSystems/blob/master/socialRec/README.md#douban-data), [processed_data](https://github.com/zyang1580/PDA/tree/main/data/douban)
 
 # Requirement 
-tensorflow == 1.14\ 
+tensorflow == 1.14 \
 Cython (for neurec evaluator)\
 Numpy\
 prefetch-generator\
