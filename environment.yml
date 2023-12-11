@@ -1,0 +1,7 @@
+name: myenv
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - pandas==0.25.0
+prefix: /home/zgong/.conda/envs/myenv
