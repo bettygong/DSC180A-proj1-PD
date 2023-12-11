@@ -695,7 +695,7 @@ class DatasetApi_Model():
                 (self.test_users, self.test_pos_items, self.test_neg_items, self.test_pos_pop, self.test_neg_pop))
         else:
             '''
-            to be finished 
+            to be finished
             '''
             self.input_type = 'without_pop'
             print("dataset api without pop")
@@ -728,7 +728,7 @@ class DatasetApi_Model():
                                             temp_api=self.temp, raw_api=self.raw)
         else:
             '''
-            to be finished 
+            to be finished
             '''
             self.user, self.pos_item, self.neg_item = self.iter_.get_next()
             if args.train == 'normal':
@@ -1257,25 +1257,22 @@ if __name__ == '__main__':
         print_result_f(ret)
 
 
-        ''' 
-        |-------- BPRMF-A result -------- |
-        '''
-        print("|-------- BPRMF-A result -------- |")
-        save_ckpt_dir = save_dir + args.dataset + "/" + "BPRMF-A/"
-        print("loading trained model")
-        saver.restore(sess, save_ckpt_dir + "best_ckpt.ckpt")
-
-        pop_used = np.power(last_stage_popualarity_ori, best_pop_expo_normal) # use prediction method (a) for desired popularity
-        evaluation_model.set_testing_popularity(pop_used)
-        ret = evaluation_model.eval(model, sess, rec_type='main_with_pop')
-        print("---- BPRMF-A result without last stage pop:")
-        print_result_f(ret)
-
-        pop_used = np.power(linear_predict_popularity_ori, best_pop_expo_normal) # use prediction method (b) for desired popularity
-        evaluation_model.set_testing_popularity(pop_used)
-        ret = evaluation_model.eval(model, sess, rec_type='main_with_pop')
-        print("---- BPRMF-A result without linear predicted pop:")
-        print_result_f(ret)
-
-
-
+        # '''
+        # |-------- BPRMF-A result -------- |
+        # '''
+        # print("|-------- BPRMF-A result -------- |")
+        # save_ckpt_dir = save_dir + args.dataset + "/" + "BPRMF-A/"
+        # print("loading trained model")
+        # saver.restore(sess, save_ckpt_dir + "best_ckpt.ckpt")
+        #
+        # pop_used = np.power(last_stage_popualarity_ori, best_pop_expo_normal) # use prediction method (a) for desired popularity
+        # evaluation_model.set_testing_popularity(pop_used)
+        # ret = evaluation_model.eval(model, sess, rec_type='main_with_pop')
+        # print("---- BPRMF-A result without last stage pop:")
+        # print_result_f(ret)
+        #
+        # pop_used = np.power(linear_predict_popularity_ori, best_pop_expo_normal) # use prediction method (b) for desired popularity
+        # evaluation_model.set_testing_popularity(pop_used)
+        # ret = evaluation_model.eval(model, sess, rec_type='main_with_pop')
+        # print("---- BPRMF-A result without linear predicted pop:")
+        # print_result_f(ret)
