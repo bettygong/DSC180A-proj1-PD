@@ -38,7 +38,7 @@ others: (you can read help, or "python xxx.py --help")\
 --lr: learning rate\
 --save_dir: path to find the file of the saved model 
 
-# Command
+# Command (To produce results)
 We can directly run saved models to get metric results (recall, precision, hit, NDCG)\
 Please download the saved_model folder as the [instruction](https://github.com/bettygong/DSC180A-proj1-PD/tree/main/save_model) said, and move the unzipped folders to the main saved_model folder.
 ## PD/PDA
