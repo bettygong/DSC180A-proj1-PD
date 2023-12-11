@@ -26,27 +26,26 @@ Then install employed packages in `myenv` by entering:\
 After version control, you then can run the code in `myenv`. (Simply activate the environment by `source activate myenv`)
 
 # Parameters
-Ket parameters in `simple_reproduce.py` and `train_new_api.py`:
+Ket parameters in `simple_reproduce.py` and `train_new_api.py`:\
+--pop_exp: gamma in paper (applicable only for PD and PDA models).\
+--train: model selection (normal:BPRMF/BPRMF-A | s_condition:PD/PDA | temp_pop:BPR(t)-pop).\
+--test: similar to train.\
+-- saveID: saved name flag.\
+--Ks: list, set top K.\
 
---pop_exp: gamma in paper (applicable only for PD and PDA models).
---train: model selection (normal:BPRMF/BPRMF-A | s_condition:PD/PDA | temp_pop:BPR(t)-pop).
---test: similar to train.
--- saveID: saved name flag.
---Ks: list, set top K.
-
-others: (you can read help, or "python xxx.py --help")
---dataset: we only use douban dataset 
---lr: learning rate
---save_dir: path to find the file of saved model 
+others: (you can read help, or "python xxx.py --help")\
+--dataset: we only use douban dataset \
+--lr: learning rate\
+--save_dir: path to find the file of the saved model 
 
 # Command
 We can directly run saved models to get metric results (recall, precision, hit, NDCG)
 ## PD/PDA
-Run `python -u MF/simple_reproduce.py --dataset douban --epoch 2000 --save_flag 0 --log_interval 5 --start 0 --end 10 --step 1 --batch_size 2048 --lr 1e-2 --train s_condition --test s_condtion --saveID xxx --cuda 0 --regs 1e-2 --valid_set valid --pop_exp 0.22 --save_dir /home/zgong/private/PDA/save_model/ --Ks [20,50]`
+Run `python -u MF/simple_reproduce.py --dataset douban --epoch 2000 --save_flag 0 --log_interval 5 --start 0 --end 10 --step 1 --batch_size 2048 --lr 1e-2 --train s_condition --test s_condtion --saveID xxx --cuda 0 --regs 1e-2 --valid_set valid --pop_exp 0.22 --save_dir /home/zgong/private/PDA/save_model/ --Ks [20,50]`\
 Note: I'm using DSMLP to run the code so the `save_dir` path includes my username. If you want to run it on DSMLP as well, please modify to your username. If you run on local computer, you should use the path leading to the PDA folder.
 
 ## Baseline model (BPRMF)
-Run `python -u MF/simple_reproduce.py --dataset douban --epoch 2000 --save_flag 0 --log_interval 5 --start 0 --end 10 --step 1 --batch_size 2048 --lr 1e-2 --train normal --test normal --saveID xxx --cuda 0 --regs 1e-2 --valid_set valid --pop_exp 0.22 --save_dir /home/zgong/private/PDA/save_model/ --Ks [20,50]`
+Run `python -u MF/simple_reproduce.py --dataset douban --epoch 2000 --save_flag 0 --log_interval 5 --start 0 --end 10 --step 1 --batch_size 2048 --lr 1e-2 --train normal --test normal --saveID xxx --cuda 0 --regs 1e-2 --valid_set valid --pop_exp 0.22 --save_dir /home/zgong/private/PDA/save_model/ --Ks [20,50]`\
 Note: modify save_dir like above. 
 
 
