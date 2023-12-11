@@ -3,8 +3,8 @@ Causal Inference for de-confounding popularity bias. This is a replicated projec
 Recommendation](https://arxiv.org/pdf/2105.06067.pdf) based on Tensorflow. 
 
 # Dataset Download
-Douban(Movie): The original data is downloaded from the following link, cited as Song, Weiping, et al. "Session-based social recommendation via dynamic graph attention networks." WSDM 2019. Processed data is too large to be pushed so you may download it from the original authors' GitHub page.
-[original data](https://github.com/DeepGraphLearning/RecommenderSystems/blob/master/socialRec/README.md#douban-data), [processed_data](https://github.com/zyang1580/PDA/tree/main/data/douban)
+Douban(Movie): The original data is downloaded from the following link, cited as Song, Weiping, et al. "Session-based social recommendation via dynamic graph attention networks." WSDM 2019. You can download processed data from douban.zip and remember to move the unzipped files into the main douban folder.
+[original data](https://github.com/DeepGraphLearning/RecommenderSystems/blob/master/socialRec/README.md#douban-data), [processed_data](https://github.com/bettygong/DSC180A-proj1-PD/tree/main/data/douban)
 
 # Requirement 
 tensorflow == 1.14 \
