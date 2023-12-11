@@ -13,3 +13,13 @@ Numpy\
 prefetch-generator\
 python3\
 pandas == 0.25.0
+
+In order to set up the environment and control package versions, please download [environment.yml](https://github.com/bettygong/DSC180A-proj1-PD/blob/main/environment.yml) and create the environment `myenv` by entering `conda env create -f environment.yml` in the terminal. \
+Then install employed packages in `myenv` by entering:\
+pip install tensorflow==1.14 \
+python -m pip install scipy \
+pip install prefetch-generator \
+pip install -U matplotlib \
+
+
+
