@@ -39,6 +39,7 @@ others: (you can read help, or "python xxx.py --help")\
 --save_dir: path to find the file of the saved model 
 
 # Command (To produce results)
+Note: Before doing anything else, please rename the cloned repository to `PDA`, ie. the main folder of this project will be `PDA` instead of `DSC180A-proj1-PD`.
 We can directly run saved models to get metric results (recall, precision, hit, NDCG)\
 Please download the saved_model folder as the [instruction](https://github.com/bettygong/DSC180A-proj1-PD/tree/main/save_model) said, and move the unzipped folders to the main saved_model folder.
 ## PD/PDA
